@@ -9,16 +9,22 @@
 
 body{
     width: 100%;
-    padding-bottom: 22vw;
+    padding-bottom: 0;
 }
 a{
     text-decoration: none;
 }
+
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 .header{
     display: grid;
-    grid-template-columns: 14% 72% 14%;
+    grid-template-columns: 27% 46% 27%;
     align-items: center;
-    padding: 2vw 2vw;
+    padding: .4vw 2vw;
     justify-items:end;
     background-color: #284ea1;
     width: 100%;
@@ -28,33 +34,38 @@ a{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: .6vw;
+}
+.logo span{
+    display: block;
+    font-size: 2.4vw;
+    color: white;
 }
 .logo img{
-    width: 75%;
+    width: 3.7vw;
 }
 .search_box{
     display: flex;
     align-items: center;
     background-color: white;
-    padding: 0 4.5vw;
+    padding: 0 1.5vw;
     width: 100%;
     border-radius: 100vw;
 }
 .search_box input{
     width: 100%;
-    font-size: 4vw;
+    font-size: 1.1vw;
     outline: none;
     border: none;
-    padding: 2.3vw 0;
+    padding: .8vw 0;
     background-color: transparent;
 }
 .search_box input::placeholder{
-    font-size: 4vw;
+    font-size: 1.1vw;
 }
 .search_box iconify-icon{
-    font-size: 4.3vw;
+    font-size: 1.4vw;
 }
-
 .hamburger{
     width: max-content;
     background-color: transparent;
@@ -66,34 +77,116 @@ a{
     justify-content: center;
 }
 .hamburger iconify-icon{
-    font-size: 9.5vw;
+    font-size: 2.8vw;
     color: white;
 }
 
+.layout_dashboard{
+    background-color: #65bde0;
+}
+.fixed_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4vw;
+    padding: .6vw 0;
+}
+.box_fixed_menu iconify-icon{
+    display: none;
+}
+.box_fixed_menu h3{
+    color: white;
+    font-size: 2vw;
+}
+
+.layout_dekstop{
+    display: grid;
+    grid-template-columns: 77% 23%;
+    height: 93vh;
+}
+.space_layout{
+    display: none;
+}
+.space_layout_dekstop{
+    display: block;
+    margin-bottom: .5vw;
+}
+.space{
+    height: 11.3vw;
+    width: 100%;
+    background-color: white;
+    border-radius: .7vw;
+}
+.layout_sidebar_dekstop{
+    margin-right: 1vw;
+    margin-top: .4vw;
+    display: block;
+}
+.layout_content_dekstop{
+    background-color: white;
+    margin: 1vw;
+    margin-top: .45vw;
+    border-radius: .7vw;
+    overflow-y: scroll;
+    height: 80.6vh;
+}
+.layout_sidebar_dekstop ul{
+    display: flex;
+    justify-content: center;
+    gap: 1.7vw;
+    margin-bottom: .3vw;
+}
+.layout_sidebar_dekstop ul li{
+    list-style: none;
+    font-size: 1vw;
+    color:white;
+}
+.space_side{
+    background-color: white;
+    width: 100%;
+    height: 2.8vw;
+    margin-bottom: .5vw;
+    border-radius: .7vw;
+}
+.layout_sidebar_dekstop ul li a{
+    color: white;
+}
+.layout_sidebar_dekstop span{
+    display: block;
+    text-align: center;
+    font-size: 1vw;
+    color:white;
+}
 .banner{
-    padding: 5vw 6vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 3vw 2vw;
     text-align: center;
 }
 .image_banner{
-    width: 35vw;
+    width: 16vw;
     display: block;
     margin: auto;
     transform: rotate(-50deg);
-    z-index: -1;
+    z-index: 0;
+}
+.banner_content{
+    width: 60%;
 }
 .banner h1{
-    margin-top: -4.8vw;
+    margin-top:0;
     z-index: 1;
     font-family: "Lexend Deca", sans-serif;
-    font-size: 6vw;
+    font-size: 3.2vw;
     font-weight: bold;
-    margin-bottom: 6vw;
+    margin-bottom: 2vw;
 }
 .banner button{
-    font-size: 3.7vw;
+    font-size: 1.4vw;
     border: none;
     outline: none;
-    padding: 1.9vw 4.5vw;
+    padding: .7vw 1.6vw;
     border-radius: 100vw;
     background-color: #284ea1;
     color: white;
@@ -101,35 +194,36 @@ a{
     align-items: center;
     justify-content: center;
     margin: auto;
-    gap: 2.2vw;
+    gap: .7vw;
+    cursor: pointer;
 }
 .banner button iconify-icon{
-    font-size: 4vw;
+    font-size: 1.3vw;
 }
 
 .catalog_layout{
     text-align: center;
-    padding: 2.8vw 3vw;
+    padding: .7vw 1.4vw;
 }
 .catalog_layout h3{
-    font-size: 4.8vw;
-    margin-bottom: 3vw;
+    font-size: 2.3vw;
+    margin-bottom: 2vw;
 }
 .catalog_grid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1vw;
 }
 .box_grid{
-    padding: 1.2vw;
+    padding: .6vw;
     background-color: #284ea1;
-    border-radius: 2vw;
+    border-radius: 1vw;
 }
 .image_grid{
     width: 100%;
-    height: 26vw;
+    height: 13vw;
     overflow: hidden;
-    border-radius: 2vw;
+    border-radius: 1vw;
     position: relative;
 }
 .image_grid img{
@@ -146,17 +240,17 @@ a{
     z-index: 2;
     position: absolute;
     right: 0;
-    bottom: 3vw;
+    bottom: 1vw;
     width: max-content;
     background-color: rgba(0, 0, 0, 0.459);
-    padding: .8vw 1.6vw;
+    padding: .5vw 1vw;
     border-radius: 1vw 0 0 1vw;
     display: flex;
     align-items: center;
 }
 .price_grid span{
     color: white;
-    font-size: 3vw;
+    font-size: 1.3vw;
 }
 
 .content_grid{
@@ -164,12 +258,12 @@ a{
     grid-template-columns: 72% 28%;
     justify-items: stretch;
     width: 100%;
-    padding: 1.3vw 0;
+    padding: .8vw 0;
 }
 .content_grid h4{
     text-align: start;
     color: white;
-    font-size: 3.2vw;
+    font-size: 1.3vw;
     font-weight: 500;
     display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -178,69 +272,31 @@ a{
       text-overflow: ellipsis;
 }
 .content_grid button{
-    font-size: 3.2vw;
+    font-size: 1.3vw;
     background-color: #00a349;
     border: none;
     outline: none;
     color: white;
-    padding: .6vw 2.7vw;
+    padding: .4vw 1.7vw;
     width: max-content;
     border-radius: 100vw;
 }
 .see_other{
-    margin-top: 4vw;
+    margin-top: 1.4vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1vw;
-    font-size: 4.3vw;
+    font-size: 1.3vw;
     font-weight: 600;
     color: #284ea1;
 }
 
-.space_layout{
-    padding: 1vw 3vw;
-}
-.space{
-    height: 60vw;
-    width: 100%;
-    background-color: #284ea1;
-    border-radius: 3vw;
-}
-
-.fixed_menu{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: #284ea1;
-    z-index: 10;
-    justify-items: center;
-    padding: 3.6vw 0;
-}
-.box_fixed_menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1vw;
-}
-.box_fixed_menu iconify-icon{
-    font-size: 6vw;
-    color: white;
-}
-.box_fixed_menu h3{
-    color: white;
-    font-weight: 400;
-    font-size: 4vw;
-}
 .contact{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    grid-gap: 4vw;
+    grid-gap: 1.4vw;
 }
 .contact_field{
     display: flex;
@@ -248,34 +304,345 @@ a{
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    gap: 1vw;
+    gap: .6vw;
 }
 .contact_field label{
-    font-size: 3.8vw;
+    font-size: 1.1vw;
 }
 .contact_field input{
     width: 100%;
-    font-size: 3.8vw;
-    padding: 1.9vw 2.8vw;
+    font-size: 1.1vw;
+    padding: .8vw 1.1vw;
     outline: none;
     border: .12vw solid #284ea1;
-    border-radius: 1vw;
+    border-radius: .6vw;
 }
 .contact_field textarea{
     width: 100%;
-    font-size: 3.8vw;
-    padding: 1.9vw 2.8vw;
+    font-size: 1.1vw;
+    padding: .8vw 1.1vw;
     outline: none;
     border: .12vw solid #284ea1;
-    border-radius: 1vw;
-    height: 27vw;
+    border-radius: .6vw;
+    height:3.2vw;
 }
 .contact button{
     background-color: #284ea1;
-    font-size: 3.8vw;
+    font-size: 1.1vw;
     outline: none;
     border: none;
-    padding: 2.8vw 3vw;
+    padding: .8vw 2vw;
     color: white;
-    border-radius: 1vw;
+    border-radius: .6vw;
+}
+
+@media (max-width:768px) {
+    .banner_content{
+        width: 100%;
+    }
+    .layout_sidebar_dekstop{
+        display: none;
+    }
+    .layout_sidebar_dekstop ul{
+        display: none;
+    }
+    .layout_sidebar_dekstop span{
+        display: none;
+    }
+    .layout_content_dekstop{
+        background-color: white;
+        margin: 0;
+        height: max-content;
+    }
+    body{
+        width: 100%;
+        padding-bottom: 22vw;
+    }
+    .container{
+        width: 100%;
+        height: max-content;
+        overflow: inherit;
+    }
+    .space_layout_dekstop{
+        display: none;
+    }
+    .layout_dekstop{
+        display: block;
+        height: max-content;
+    }
+    .layout_dashboard{
+        background-color: #ffffff;
+    }
+    .header{
+        display: grid;
+        grid-template-columns: 14% 72% 14%;
+        align-items: center;
+        padding: 2vw 2vw;
+        justify-items:end;
+        background-color: #284ea1;
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+    }
+    .logo span{
+        display: none;
+    }
+    .logo img{
+        width: 75%;
+    }
+    .search_box{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 0 4.5vw;
+        width: 100%;
+        border-radius: 100vw;
+    }
+    .search_box input{
+        width: 100%;
+        font-size: 4vw;
+        outline: none;
+        border: none;
+        padding: 2.3vw 0;
+        background-color: transparent;
+    }
+    .search_box input::placeholder{
+        font-size: 4vw;
+    }
+    .search_box iconify-icon{
+        font-size: 4.3vw;
+    }
+    
+    .hamburger{
+        width: max-content;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        text-align: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hamburger iconify-icon{
+        font-size: 9.5vw;
+        color: white;
+    }
+    
+    .banner{
+        padding: 5vw 6vw;
+        text-align: center;
+        display: inherit;
+    }
+    .image_banner{
+        width: 35vw;
+        display: block;
+        margin: auto;
+        transform: rotate(-50deg);
+        z-index: -1;
+    }
+    .banner h1{
+        margin-top: -4.8vw;
+        z-index: 1;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 6vw;
+        font-weight: bold;
+        margin-bottom: 6vw;
+    }
+    .banner button{
+        font-size: 3.7vw;
+        border: none;
+        outline: none;
+        padding: 1.9vw 4.5vw;
+        border-radius: 100vw;
+        background-color: #284ea1;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 2.2vw;
+    }
+    .banner button iconify-icon{
+        font-size: 4vw;
+    }
+    
+    .catalog_layout{
+        text-align: center;
+        padding: 2.8vw 3vw;
+    }
+    .catalog_layout h3{
+        font-size: 4.8vw;
+        margin-bottom: 3vw;
+    }
+    .catalog_grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3vw;
+    }
+    .box_grid{
+        padding: 1.2vw;
+        background-color: #284ea1;
+        border-radius: 2vw;
+    }
+    .image_grid{
+        width: 100%;
+        height: 26vw;
+        overflow: hidden;
+        border-radius: 2vw;
+        position: relative;
+    }
+    .image_grid img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+    }
+    .price_grid{
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        bottom: 3vw;
+        width: max-content;
+        background-color: rgba(0, 0, 0, 0.459);
+        padding: .8vw 1.6vw;
+        border-radius: 1vw 0 0 1vw;
+        display: flex;
+        align-items: center;
+    }
+    .price_grid span{
+        color: white;
+        font-size: 3vw;
+    }
+    
+    .content_grid{
+        display: grid;
+        grid-template-columns: 72% 28%;
+        justify-items: stretch;
+        width: 100%;
+        padding: 1.3vw 0;
+    }
+    .content_grid h4{
+        text-align: start;
+        color: white;
+        font-size: 3.2vw;
+        font-weight: 500;
+        display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+    }
+    .content_grid button{
+        font-size: 3.2vw;
+        background-color: #00a349;
+        border: none;
+        outline: none;
+        color: white;
+        padding: .6vw 2.7vw;
+        width: max-content;
+        border-radius: 100vw;
+    }
+    .see_other{
+        margin-top: 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1vw;
+        font-size: 4.3vw;
+        font-weight: 600;
+        color: #284ea1;
+    }
+    
+    .space_layout{
+        padding: 1vw 3vw;
+        display: block;
+    }
+    .space{
+        height: 60vw;
+        width: 100%;
+        background-color: #284ea1;
+        border-radius: 3vw;
+    }
+    
+    .fixed_menu{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        background-color: #284ea1;
+        z-index: 10;
+        justify-items: center;
+        padding: 3.6vw 0;
+    }
+    .box_fixed_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1vw;
+    }
+    .box_fixed_menu iconify-icon{
+        font-size: 6vw;
+        display: block;
+        color: white;
+    }
+    .box_fixed_menu h3{
+        color: white;
+        font-weight: 400;
+        font-size: 4vw;
+    }
+    .contact{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        grid-gap: 4vw;
+    }
+    .contact_field{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1vw;
+    }
+    .contact_field label{
+        font-size: 3.8vw;
+    }
+    .contact_field input{
+        width: 100%;
+        font-size: 3.8vw;
+        padding: 1.9vw 2.8vw;
+        outline: none;
+        border: .12vw solid #284ea1;
+        border-radius: 1vw;
+    }
+    .contact_field textarea{
+        width: 100%;
+        font-size: 3.8vw;
+        padding: 1.9vw 2.8vw;
+        outline: none;
+        border: .12vw solid #284ea1;
+        border-radius: 1vw;
+        height: 27vw;
+    }
+    .contact button{
+        background-color: #284ea1;
+        font-size: 3.8vw;
+        outline: none;
+        border: none;
+        padding: 2.8vw 3vw;
+        color: white;
+        border-radius: 1vw;
+    }
 }
