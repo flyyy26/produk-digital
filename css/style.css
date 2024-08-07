@@ -583,14 +583,52 @@ a{
         background-color: #284ea1;
         z-index: 10;
         justify-items: center;
-        padding: 3.6vw 0;
+        padding: 3.6vw 8vw;
+        padding-top: 0;
+        align-items: flex-end;
     }
     .box_fixed_menu{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        position: relative;
         gap: 1vw;
+    }
+    .active{
+        width: 14vw;
+        height: 14vw;
+        border-radius: 100vw;
+        /* background-color: white;
+        border: 1vw solid #284ea1; */
+        content: '';
+        transform: scale(1.4);
+        gap: .4vw;
+        margin-top: -6vw;
+        margin-bottom: 1vw;
+        z-index: 3;
+    }
+    .active::before{
+        left: -6.6vw;
+        top: -2.8vw;
+        width: 27vw;
+        height: 5.8vw;
+        position: absolute;
+        clip-path: url(#menu);
+        will-change: transform;
+        background-color: #284ea1;
+        transition: transform var(--timeOut , var(--duration));
+        content: '';
+        z-index: -1;
+    }
+    .active::after{
+        width: 12.5vw;
+        height: 12.5vw;
+        position: absolute;
+        background-color: white;
+        border-radius: 100vw;
+        content: '';
+        z-index: -1;
     }
     .box_fixed_menu iconify-icon{
         font-size: 6vw;
@@ -600,7 +638,15 @@ a{
     .box_fixed_menu h3{
         color: white;
         font-weight: 400;
-        font-size: 4vw;
+        font-size: 3vw;
+    }
+    .active iconify-icon{
+        color: #284ea1;
+        font-size: 4.6vw;
+    }
+    .active h3{
+        color: #284ea1;
+        font-size: 2.3vw;
     }
     .contact{
         display: grid;
